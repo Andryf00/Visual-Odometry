@@ -1,0 +1,22 @@
+# General sensor definitions.
+sensor_type: camera
+comment: VI-Sensor cam1 (Basler acA2440-75uc), images downsampled before calibration
+
+# Sensor extrinsics wrt. the body-frame.
+T_BS:
+  cols: 4
+  rows: 4
+  data: [0.00332251,  0.99999448, -0.00007687,  0.00215741,
+         0.9999335,  -0.00332146,  0.01104404,  0.30027538,
+         0.01104372, -0.00011356, -0.99993901, -0.0014825, 
+         0.,          0.,          0.,          1.        ]
+
+# Camera specific definitions.
+rate_hz: 16
+resolution: [612, 512]
+camera_model: pinhole
+intrinsics: [446.38011635796755, 445.88719476806966, 306.68683920642184, 246.3972559515397] #fu, fv, cu, cv
+distortion_model: radial-tangential
+distortion_coefficients: [-0.17142203909651055, 0.07427102814683195, 0.00013522240812824837, 7.182088104512626e-05]
+
+
